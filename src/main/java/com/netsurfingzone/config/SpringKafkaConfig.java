@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import com.netsurfingzone.constant.ApplicationConstant;
 import com.netsurfingzone.dto.Student;
 
 @Configuration
@@ -32,7 +31,7 @@ public class SpringKafkaConfig {
 
 	@Bean
 	public Queue studentQueue() {
-		return new Queue(ApplicationConstant.STUDENT_QUEUE, true);
+		return new Queue("student.queue", true);
 	}
 
 	@Bean
