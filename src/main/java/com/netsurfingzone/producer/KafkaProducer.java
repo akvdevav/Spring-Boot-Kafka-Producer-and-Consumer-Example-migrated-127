@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.netsurfingzone.constant.ApplicationConstant;
 import com.netsurfingzone.dto.Student;
 
 @RestController
@@ -21,7 +20,7 @@ public class KafkaProducer {
 	public String sendMessage(@RequestBody Student message) {
 
 		try {
-			rabbitTemplate.convertAndSend(ApplicationConstant.TOPIC_NAME, message);
+			rabbitTemplate.convertAndSend("student.topic", message);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
