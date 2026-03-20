@@ -1,9 +1,11 @@
 package com.netsurfingzone.constant;
 
 public class ApplicationConstant {
-	public static final String KAFKA_LOCAL_SERVER_CONFIG = "localhost:9092";
-	public static final String GROUP_ID_STRING = "group-id-string-1";
-	public static final String TOPIC_NAME = "netsurfingzone-topic-1";
-	public static final String KAFKA_LISTENER_CONTAINER_FACTORY = "kafkaListenerContainerFactory";
-	public static final String GROUP_ID_JSON = "group-id-json-1";
+	public static final String RABBITMQ_HOST = "localhost";
+	public static final String RABBITMQ_PORT = "5672";
+	public static final String RABBITMQ_USERNAME = "guest";
+	public static final String RABBITMQ_PASSWORD = "guest";
+	public static final String QUEUE_NAME = "netsurfingzone-queue-1";
+	public static final String EXCHANGE_NAME = "netsurfingzone-exchange-1";
+	public static final String ROUTING_KEY = "netsurfingzone-routing-key-1";
 }
